@@ -49,7 +49,6 @@ export const UserProvider = ({ children }: Props) => {
         navigate("/login");
       }
     } catch (error) {
-      // Re-throw the error so the component can handle it
       throw error;
     }
   };
@@ -70,7 +69,7 @@ export const UserProvider = ({ children }: Props) => {
           navigate("/search");
         }
       })
-      .catch((e) => toast.warning("Server error occured"));
+      .catch((e) => toast.warning("Server error occurred"));
   };
 
   const isLoggedIn = () => {
@@ -81,7 +80,8 @@ export const UserProvider = ({ children }: Props) => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setUser(null);
-    setToken("");
+    setToken(null);
+    delete axios.defaults.headers.common["Authorization"];
     navigate("/");
   };
 

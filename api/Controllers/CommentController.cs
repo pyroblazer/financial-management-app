@@ -64,6 +64,7 @@ namespace api.Controllers
 
         [HttpPost]
         [Route("{symbol:alpha}")]
+        [Authorize]
         public async Task<IActionResult> Create([FromRoute] string symbol, CreateCommentDto commentDto)
         {
             if (!ModelState.IsValid)
@@ -95,6 +96,7 @@ namespace api.Controllers
 
         [HttpPut]
         [Route("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCommentRequestDto updateDto)
         {
             if (!ModelState.IsValid)
@@ -112,6 +114,7 @@ namespace api.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             if (!ModelState.IsValid)

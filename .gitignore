@@ -1,2 +1,18 @@
 # Visual Studio
 .vs/
+
+# Build results
+bin/
+obj/
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+
+# Node
+frontend/node_modules/
+frontend/build/
+
+# Environment
+appsettings.json
+!appsettings.json.example
