@@ -1,0 +1,18 @@
+{
+  "ConnectionStrings": {
+    "MySQLConnection": "<input-mysqlconnection-here>"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "FMPKey": "<input-financial-management-prep-key-here>",
+  "JWT": {
+    "Issuer": "http://localhost:5246",
+    "Audience": "http://localhost:5246",
+    "SigningKey": "<input-any-sample-signing-key-here>"
+  }
+}
